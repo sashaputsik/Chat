@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>897128674075-iont58fjl1khjkr55h462376h4tpuasn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.897128674075-iont58fjl1khjkr55h462376h4tpuasn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCiwZZqOY5Cc_4nKlO7JYbrd8ciC5vNFqM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>897128674075</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>sashaputsikovich.Map-Place</string>
+	<key>PROJECT_ID</key>
+	<string>mapplace-4fbba</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mapplace-4fbba.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:897128674075:ios:ad89ae7411815ac9a659be</string>
+	<key>DATABASE_URL</key>
+	<string>https://mapplace-4fbba.firebaseio.com</string>
+</dict>
+</plist>
