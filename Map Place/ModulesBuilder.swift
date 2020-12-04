@@ -7,9 +7,16 @@ protocol BuilderProtocol {
     func setLoginViewController() -> UIViewController
     func setSignInViewController() -> UIViewController
     func setMainViewController() -> UIViewController
+    func setMessengerViewController(uid: String) -> UIViewController
 }
 
 class Builder: BuilderProtocol{
+    func setMessengerViewController(uid: String) -> UIViewController {
+        let view = MessengerViewController()
+        view.uid = uid
+        return view
+    }
+    
     func setMainViewController() -> UIViewController {
         let view = MainViewController()
         let presenter = MainModulePresenter(view: view)

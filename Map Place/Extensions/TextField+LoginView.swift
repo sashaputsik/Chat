@@ -5,6 +5,7 @@ extension LoginViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(true)
+        return true
     }
     func textFieldDidChangeSelection(_ textField: UITextField) {
         guard let password = textField.text else{return }
@@ -16,7 +17,6 @@ extension LoginViewController: UITextFieldDelegate{
             }else{
                 textField.layer.borderColor = UIColor.red.cgColor
             }
-            textField.layer.cornerRadius = 4
         }
     }
 }

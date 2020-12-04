@@ -19,6 +19,8 @@ extension MainViewController: UITableViewDataSource{
 
 extension MainViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("")
+        guard let uid = users?[indexPath.row].uid else{return}
+        navigationController?.pushViewController(Builder().setMessengerViewController(uid: uid),
+                                                 animated: true)
     }
 }
