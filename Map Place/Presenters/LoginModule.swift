@@ -1,5 +1,5 @@
 import Foundation
 
 protocol LoginModuleProtocol {
-    func createNewUser(completed: CompletedLogin)
+    func createNewUser(completed: CompletedAuth)
 }

@@ -26,68 +26,70 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jb-Nt-Uqq">
-                    <rect key="frame" x="20" y="109" width="41" height="21"/>
+                    <rect key="frame" x="20" y="64" width="41" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0B-5v-x9Z">
-                    <rect key="frame" x="20" y="204" width="83" height="20.5"/>
+                    <rect key="frame" x="20" y="159" width="83" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9I-J7-uiH">
-                    <rect key="frame" x="20" y="298.5" width="344" height="20.5"/>
+                    <rect key="frame" x="20" y="253.5" width="344" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeate password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-Dt-ukJ">
-                    <rect key="frame" x="20" y="393" width="141" height="20.5"/>
+                    <rect key="frame" x="20" y="348" width="141" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkp-Qz-oZC">
-                    <rect key="frame" x="20" y="150" width="344" height="34"/>
+                    <rect key="frame" x="20" y="105" width="364" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="snl-w6-ANe"/>
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EA1-FA-q2b">
-                    <rect key="frame" x="20" y="244.5" width="344" height="34"/>
+                    <rect key="frame" x="20" y="199.5" width="364" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="JCf-9y-7Y0"/>
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTa-su-LMK">
-                    <rect key="frame" x="20" y="339" width="344" height="34"/>
+                    <rect key="frame" x="20" y="294" width="364" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="qh7-cj-b9l"/>
                     </connections>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gt4-xe-vng">
-                    <rect key="frame" x="20" y="433.5" width="344" height="34"/>
+                    <rect key="frame" x="20" y="388.5" width="364" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="lh2-2t-Qfq"/>
                     </connections>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kA6-uN-ipp">
-                    <rect key="frame" x="20" y="487.5" width="374" height="240"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA6-uN-ipp">
+                    <rect key="frame" x="20" y="442.5" width="374" height="240"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="240" id="IvU-SK-LM2"/>
                     </constraints>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <string key="text">You create a new user in your Firebase project by calling the createUserWithEmailAndPassword method or by signing in a user for the first time using a federated identity provider, such as Google Sign-In or Facebook Login. You can also create new password-authenticated users from the Authentication section of the Firebase console, on the Users page, or by using the Admin SDK.
+
+</string>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -110,23 +112,23 @@
                 <constraint firstItem="Zkp-Qz-oZC" firstAttribute="leading" secondItem="8Jb-Nt-Uqq" secondAttribute="leading" id="7M4-iN-bJM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kA6-uN-ipp" secondAttribute="trailing" constant="20" id="7pS-fZ-CBo"/>
                 <constraint firstItem="EA1-FA-q2b" firstAttribute="leading" secondItem="8Jb-Nt-Uqq" secondAttribute="leading" id="AZA-bB-ZKY"/>
-                <constraint firstItem="8Jb-Nt-Uqq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="65" id="BwS-vB-x5B"/>
+                <constraint firstItem="8Jb-Nt-Uqq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="BwS-vB-x5B"/>
                 <constraint firstItem="jIw-Dt-ukJ" firstAttribute="leading" secondItem="8Jb-Nt-Uqq" secondAttribute="leading" id="D0F-8e-wTm"/>
+                <constraint firstItem="EA1-FA-q2b" firstAttribute="trailing" secondItem="Zkp-Qz-oZC" secondAttribute="trailing" id="DLR-PT-whR"/>
                 <constraint firstItem="M0B-5v-x9Z" firstAttribute="top" secondItem="Zkp-Qz-oZC" secondAttribute="bottom" constant="20" id="EFI-zt-74D"/>
                 <constraint firstItem="8Jb-Nt-Uqq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="F4m-3r-gzR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M9I-J7-uiH" secondAttribute="trailing" constant="50" id="FMl-kC-pu9"/>
                 <constraint firstItem="mTa-su-LMK" firstAttribute="top" secondItem="M9I-J7-uiH" secondAttribute="bottom" constant="20" id="Fzf-MU-7H5"/>
                 <constraint firstItem="kA6-uN-ipp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="JB6-og-k2y"/>
                 <constraint firstItem="M9I-J7-uiH" firstAttribute="leading" secondItem="8Jb-Nt-Uqq" secondAttribute="leading" id="JRd-Y7-zwo"/>
+                <constraint firstItem="mTa-su-LMK" firstAttribute="trailing" secondItem="Zkp-Qz-oZC" secondAttribute="trailing" id="KGb-Kv-WAw"/>
                 <constraint firstItem="Gt4-xe-vng" firstAttribute="leading" secondItem="8Jb-Nt-Uqq" secondAttribute="leading" id="Lbf-O1-tAr"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EA1-FA-q2b" secondAttribute="trailing" constant="50" id="Lq1-zw-cCX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EA1-FA-q2b" secondAttribute="trailing" constant="30" id="Lq1-zw-cCX"/>
                 <constraint firstItem="EA1-FA-q2b" firstAttribute="top" secondItem="M0B-5v-x9Z" secondAttribute="bottom" constant="20" id="N8t-Pu-7yk"/>
                 <constraint firstItem="25K-M6-l0w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="NB6-Gx-Q7F"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mTa-su-LMK" secondAttribute="trailing" constant="50" id="QeO-mg-UN4"/>
+                <constraint firstItem="Gt4-xe-vng" firstAttribute="trailing" secondItem="Zkp-Qz-oZC" secondAttribute="trailing" id="RRP-3G-7aQ"/>
                 <constraint firstItem="kA6-uN-ipp" firstAttribute="top" secondItem="Gt4-xe-vng" secondAttribute="bottom" constant="20" id="Uh0-fa-frd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gt4-xe-vng" secondAttribute="trailing" constant="50" id="UwM-TC-277"/>
                 <constraint firstItem="jIw-Dt-ukJ" firstAttribute="top" secondItem="mTa-su-LMK" secondAttribute="bottom" constant="20" id="YKF-G7-Ydg"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zkp-Qz-oZC" secondAttribute="trailing" constant="50" id="cqc-Lh-yxS"/>
                 <constraint firstItem="mTa-su-LMK" firstAttribute="leading" secondItem="8Jb-Nt-Uqq" secondAttribute="leading" id="ecY-ty-wJA"/>
                 <constraint firstItem="M0B-5v-x9Z" firstAttribute="leading" secondItem="8Jb-Nt-Uqq" secondAttribute="leading" id="lH0-5H-paR"/>
                 <constraint firstItem="M9I-J7-uiH" firstAttribute="top" secondItem="EA1-FA-q2b" secondAttribute="bottom" constant="20" id="oDE-Km-9XW"/>

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		965D991B26CE2643F8367732 /* Pods_Map_Place.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508932B142665D9819F12809 /* Pods_Map_Place.framework */; };
+		9FD81CE2257A961400712A10 /* TableView+MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81CE1257A961400712A10 /* TableView+MainView.swift */; };
+		9FD81CE5257A99B100712A10 /* MessengerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD81CE4257A99B100712A10 /* MessengerViewController.xib */; };
+		9FD81CE9257A99CC00712A10 /* MessengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81CE8257A99CC00712A10 /* MessengerViewController.swift */; };
 		9FF77C1F2577F103004C86CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C1E2577F103004C86CB /* AppDelegate.swift */; };
 		9FF77C212577F103004C86CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C202577F103004C86CB /* SceneDelegate.swift */; };
 		9FF77C262577F103004C86CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF77C242577F103004C86CB /* Main.storyboard */; };
@@ -21,18 +24,22 @@
 		9FF77C842577FEC1004C86CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C832577FEC1004C86CB /* LoginViewController.swift */; };
 		9FF77C872577FEF5004C86CB /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF77C862577FEF5004C86CB /* SignInViewController.xib */; };
 		9FF77C8A2577FF0A004C86CB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF77C892577FF0A004C86CB /* LoginViewController.xib */; };
-		9FF77C8C2577FF1B004C86CB /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C8B2577FF1B004C86CB /* LoginModel.swift */; };
+		9FF77C8C2577FF1B004C86CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C8B2577FF1B004C86CB /* Model.swift */; };
 		9FF77C902578069A004C86CB /* TextField+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C8F2578069A004C86CB /* TextField+LoginView.swift */; };
 		9FF77C94257811EE004C86CB /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C93257811EE004C86CB /* LoginModule.swift */; };
 		9FF77C9725781325004C86CB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C9625781325004C86CB /* MainViewController.swift */; };
 		9FF77C9F2578137F004C86CB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF77C9E2578137F004C86CB /* MainViewController.xib */; };
 		9FF77CA2257813BA004C86CB /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77CA1257813BA004C86CB /* MainModule.swift */; };
+		9FF77CAB257917FA004C86CB /* SignInModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77CAA257917F9004C86CB /* SignInModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22D53CBDBA44187CDDDEE788 /* Pods-Map Place.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map Place.debug.xcconfig"; path = "Target Support Files/Pods-Map Place/Pods-Map Place.debug.xcconfig"; sourceTree = "<group>"; };
 		508932B142665D9819F12809 /* Pods_Map_Place.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Map_Place.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77392CC26DD39FCD9C748917 /* Pods-Map Place.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Map Place.release.xcconfig"; path = "Target Support Files/Pods-Map Place/Pods-Map Place.release.xcconfig"; sourceTree = "<group>"; };
+		9FD81CE1257A961400712A10 /* TableView+MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+MainView.swift"; sourceTree = "<group>"; };
+		9FD81CE4257A99B100712A10 /* MessengerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessengerViewController.xib; sourceTree = "<group>"; };
+		9FD81CE8257A99CC00712A10 /* MessengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerViewController.swift; sourceTree = "<group>"; };
 		9FF77C1B2577F103004C86CB /* Map Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF77C1E2577F103004C86CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		9FF77C202577F103004C86CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../New Group/SceneDelegate.swift"; sourceTree = "<group>"; };
@@ -48,12 +55,13 @@
 		9FF77C832577FEC1004C86CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9FF77C862577FEF5004C86CB /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		9FF77C892577FF0A004C86CB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		9FF77C8B2577FF1B004C86CB /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		9FF77C8B2577FF1B004C86CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9FF77C8F2578069A004C86CB /* TextField+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+LoginView.swift"; sourceTree = "<group>"; };
 		9FF77C93257811EE004C86CB /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
 		9FF77C9625781325004C86CB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9FF77C9E2578137F004C86CB /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		9FF77CA1257813BA004C86CB /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		9FF77CAA257917F9004C86CB /* SignInModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,14 @@
 				77392CC26DD39FCD9C748917 /* Pods-Map Place.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9FD81CE7257A99B800712A10 /* MessengerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FD81CE8257A99CC00712A10 /* MessengerViewController.swift */,
+			);
+			path = MessengerViewController;
 			sourceTree = "<group>";
 		};
 		9FF77C122577F103004C86CB = {
@@ -126,7 +142,7 @@
 		9FF77C632577F49A004C86CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9FF77C8B2577FF1B004C86CB /* LoginModel.swift */,
+				9FF77C8B2577FF1B004C86CB /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +150,7 @@
 		9FF77C642577F4A0004C86CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9FD81CE7257A99B800712A10 /* MessengerViewController */,
 				9FF77C802577FEB5004C86CB /* LoginViewController */,
 				9FF77C7B2577FE9E004C86CB /* SignInViewController */,
 				9FF77C702577F805004C86CB /* AuthViewController */,
@@ -147,6 +164,7 @@
 			children = (
 				9FF77C93257811EE004C86CB /* LoginModule.swift */,
 				9FF77CA1257813BA004C86CB /* MainModule.swift */,
+				9FF77CAA257917F9004C86CB /* SignInModule.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -158,6 +176,7 @@
 				9FF77C862577FEF5004C86CB /* SignInViewController.xib */,
 				9FF77C892577FF0A004C86CB /* LoginViewController.xib */,
 				9FF77C9E2578137F004C86CB /* MainViewController.xib */,
+				9FD81CE4257A99B100712A10 /* MessengerViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF77C8F2578069A004C86CB /* TextField+LoginView.swift */,
+				9FD81CE1257A961400712A10 /* TableView+MainView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD81CE5257A99B100712A10 /* MessengerViewController.xib in Resources */,
 				9FF77C2B2577F107004C86CB /* LaunchScreen.storyboard in Resources */,
 				9FF77C342577F13B004C86CB /* GoogleService-Info.plist in Resources */,
 				9FF77C752577F844004C86CB /* AuthViewController.xib in Resources */,
@@ -348,16 +369,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF77C842577FEC1004C86CB /* LoginViewController.swift in Sources */,
-				9FF77C8C2577FF1B004C86CB /* LoginModel.swift in Sources */,
+				9FF77C8C2577FF1B004C86CB /* Model.swift in Sources */,
 				9FF77C94257811EE004C86CB /* LoginModule.swift in Sources */,
 				9FF77CA2257813BA004C86CB /* MainModule.swift in Sources */,
 				9FF77C1F2577F103004C86CB /* AppDelegate.swift in Sources */,
 				9FF77C722577F81D004C86CB /* AuthViewController.swift in Sources */,
 				9FF77C902578069A004C86CB /* TextField+LoginView.swift in Sources */,
 				9FF77C212577F103004C86CB /* SceneDelegate.swift in Sources */,
+				9FD81CE9257A99CC00712A10 /* MessengerViewController.swift in Sources */,
 				9FF77C7D2577FEB0004C86CB /* SignInViewController.swift in Sources */,
+				9FD81CE2257A961400712A10 /* TableView+MainView.swift in Sources */,
 				9FF77C792577FC71004C86CB /* ModulesBuilder.swift in Sources */,
 				9FF77C9725781325004C86CB /* MainViewController.swift in Sources */,
+				9FF77CAB257917FA004C86CB /* SignInModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

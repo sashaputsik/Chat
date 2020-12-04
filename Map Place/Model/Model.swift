@@ -1,39 +1,41 @@
 import Foundation
 
-//MARK: Login Model
+//MARK: User Model
 
-protocol LoginProtocol {
+protocol AuthProtocol {
     var email: String { get set }
     var userName: String? { get set }
-    var password: String? { get set }
-    
-    init(name: String, userName: String, password: String)
+    var uid: String? {get set}
+    var password: String? {get set}
+    init(name: String, userName: String, uid: String, password: String?)
 }
 
-protocol LoginErrorProtocol {
+protocol AuthErrorProtocol {
     var errorDiscription: String { get set }
     var title: String { get set }
     init(errorDiscription: String, title: String)
 }
 
-class User: LoginProtocol{
+class User: AuthProtocol{
     var email: String
     var userName: String?
+    var uid: String?
     var password: String?
     
-    required init(name: String, userName: String, password: String) {
+    required init(name: String, userName: String, uid: String, password: String?) {
         self.email = name
         self.userName = userName
+        self.uid = uid
         self.password = password
     }
 }
 
-enum CompletedLogin{
+enum CompletedAuth{
     case success(User)
-    case error(LoginError)
+    case error(AuthError)
 }
 
-class LoginError: LoginErrorProtocol{
+class AuthError: AuthErrorProtocol{
     var errorDiscription: String
     
     var title: String
