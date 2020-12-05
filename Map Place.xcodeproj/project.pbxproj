@@ -14,6 +14,7 @@
 		9FD81CEC257A9B1C00712A10 /* TableView+MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81CEB257A9B1C00712A10 /* TableView+MessengerView.swift */; };
 		9FD81CEF257A9B8100712A10 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81CEE257A9B8000712A10 /* MessageModel.swift */; };
 		9FD81CF2257A9CAE00712A10 /* TextField+MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81CF1257A9CAE00712A10 /* TextField+MessengerView.swift */; };
+		9FD81D09257BF8FA00712A10 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81D08257BF8FA00712A10 /* MessageTableViewCell.swift */; };
 		9FF77C1F2577F103004C86CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C1E2577F103004C86CB /* AppDelegate.swift */; };
 		9FF77C212577F103004C86CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C202577F103004C86CB /* SceneDelegate.swift */; };
 		9FF77C262577F103004C86CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF77C242577F103004C86CB /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		9FD81CEB257A9B1C00712A10 /* TableView+MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+MessengerView.swift"; sourceTree = "<group>"; };
 		9FD81CEE257A9B8000712A10 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		9FD81CF1257A9CAE00712A10 /* TextField+MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+MessengerView.swift"; sourceTree = "<group>"; };
+		9FD81D08257BF8FA00712A10 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		9FF77C1B2577F103004C86CB /* Map Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF77C1E2577F103004C86CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		9FF77C202577F103004C86CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../New Group/SceneDelegate.swift"; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = MessengerView;
 			sourceTree = "<group>";
 		};
+		9FD81D07257BF8EC00712A10 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9FD81D08257BF8FA00712A10 /* MessageTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		9FF77C122577F103004C86CB = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		9FF77C1D2577F103004C86CB /* Map Place */ = {
 			isa = PBXGroup;
 			children = (
+				9FD81D07257BF8EC00712A10 /* Base */,
 				9FF77C5E2577F469004C86CB /* AppFiles */,
 				9FF77C272577F107004C86CB /* Assets.xcassets */,
 				9FF77C692577F4B8004C86CB /* Extensions */,
@@ -396,6 +407,7 @@
 				9FF77C722577F81D004C86CB /* AuthViewController.swift in Sources */,
 				9FF77C902578069A004C86CB /* TextField+LoginView.swift in Sources */,
 				9FF77C212577F103004C86CB /* SceneDelegate.swift in Sources */,
+				9FD81D09257BF8FA00712A10 /* MessageTableViewCell.swift in Sources */,
 				9FD81CE9257A99CC00712A10 /* MessengerViewController.swift in Sources */,
 				9FF77C7D2577FEB0004C86CB /* SignInViewController.swift in Sources */,
 				9FD81CE2257A961400712A10 /* TableView+MainView.swift in Sources */,

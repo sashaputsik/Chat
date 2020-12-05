@@ -7,13 +7,15 @@ protocol BuilderProtocol {
     func setLoginViewController() -> UIViewController
     func setSignInViewController() -> UIViewController
     func setMainViewController() -> UIViewController
-    func setMessengerViewController(uid: String) -> UIViewController
+    func setMessengerViewController(uid: String,
+                                    userName: String) -> UIViewController
 }
 
 class Builder: BuilderProtocol{
-    func setMessengerViewController(uid: String) -> UIViewController {
+    func setMessengerViewController(uid: String, userName: String) -> UIViewController {
         let view = MessengerViewController()
         view.uid = uid
+        view.title = userName
         return view
     }
     

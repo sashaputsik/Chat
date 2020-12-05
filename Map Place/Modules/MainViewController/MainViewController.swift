@@ -23,7 +23,6 @@ class MainViewController: UIViewController, MainModuleProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-        tableView.reloadData()
     }
     @IBAction func signOut(_ sender: Any) {
         try? Auth.auth().signOut()

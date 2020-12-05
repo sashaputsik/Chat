@@ -11,10 +11,14 @@ class MessengerViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var bottomTextField: NSLayoutConstraint!
-    
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet var bottom: [NSLayoutConstraint]!
     override func viewWillAppear(_ animated: Bool) {
         guard let uid = uid else{return }
+        sendButton.addTarget(self,
+                             action: #selector(send),
+                             for: .touchUpInside)
+        navigationController?.isNavigationBarHidden = false
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(handle(keyboardShowNotification:)),
                                                name: UIResponder.keyboardDidShowNotification,
@@ -23,27 +27,36 @@ class MessengerViewController: UIViewController {
         tableView.keyboardDismissMode = .onDrag
         
         setMessages(uid: uid) {
-            DispatchQueue.main.async {
-                self.tableView.reloadData() 
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else{return }
+                self.tableView.reloadData()
+                let indexPath = IndexPath(item: self.messages.count-1,
+                                          section: 0)
+                self.tableView.scrollToRow(at: indexPath,
+                                           at: .bottom,
+                                           animated: true)
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self,
+        tableView.register(MessageTableViewCell.self,
                            forCellReuseIdentifier: "cell")
         
     }
     
-    func setMessages(uid: String, complitionHandler: @escaping ()->()){
+    func setMessages(uid: String,
+                     complitionHandler: @escaping ()->()){
         guard let uidU = Auth.auth().currentUser?.uid else{return }
         let db = FirebaseDatabase.Database.database().reference().child("users").child(uidU).child("messages").child(uid)
         db.observe(.childAdded) { (snapshot) in
                 print(snapshot)
                 if let dict = snapshot.value as? [String: AnyObject]{
                     guard let text = dict["text"] as? String, let who = dict["who"] as? String, let time = dict["time"] as? String else{return }
-                    let message = Message(text: text, who: who, time: time)
+                    let message = Message(text: text,
+                                          who: who,
+                                          time: time)
                     self.messages.append(message)
                 }
             
@@ -51,9 +64,23 @@ class MessengerViewController: UIViewController {
         } withCancel: { (erorr) in
             print(erorr)
         }
-
+    }
+    
+    func pushMessage(text: String){
+        guard let currentUser = Auth.auth().currentUser else{return }
+        guard let uid = uid else{return }
+        let db = Database.database().reference().child("users").child(currentUser.uid).child("messages").child(uid)
+        let dateFormmater = DateFormatter()
+        let child = db.childByAutoId()
+        child.setValue(["text": text,
+                        "who": "me",
+                        "time": dateFormmater.string(from: Date())])
         
-            
+        let dbOtherUser = Database.database().reference().child("users").child(uid).child("messages").child(currentUser.uid)
+        let childOtherUser = dbOtherUser.childByAutoId()
+        childOtherUser.setValue(["text": text,
+                                 "who": "her",
+                                 "time": dateFormmater.string(from: Date())])
     }
     
     //MARK: Handler
@@ -63,9 +90,21 @@ class MessengerViewController: UIViewController {
         print("Keyboard show notification")
         if let userInfo = notification.userInfo,
             let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
-                self.bottomTextField.constant  = 0 - keyboardRectangle.height
+            for constrain in self.bottom{
+                constrain.constant  = 0 - keyboardRectangle.height
                 self.textField.layoutIfNeeded()
+            }
         }
+    }
+    
+    @objc
+    private
+    func send(){
+        guard let text = textField.text else{return }
+        if textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) != ""{
+            pushMessage(text: text)
+        }
+        textField.text = ""
     }
 
 

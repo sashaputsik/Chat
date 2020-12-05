@@ -9,13 +9,9 @@ extension MessengerViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = messages[indexPath.row].text
-        if messages[indexPath.row].who == "me"{
-            cell.textLabel?.textAlignment = .right
-        }else{
-            cell.textLabel?.textAlignment = .left
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MessageTableViewCell else{return UITableViewCell()}
+        cell.messageLabel.text = messages[indexPath.row].text
+        cell.isIncoming = messages[indexPath.row].who == "me" ? false : true
         return cell
     }
     
