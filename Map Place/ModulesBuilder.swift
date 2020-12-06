@@ -9,9 +9,15 @@ protocol BuilderProtocol {
     func setMainViewController() -> UIViewController
     func setMessengerViewController(uid: String,
                                     userName: String) -> UIViewController
+    func setEditInfoViewController()->UIViewController
 }
 
 class Builder: BuilderProtocol{
+    func setEditInfoViewController() -> UIViewController {
+        let view = EditInfoViewController()
+        return view
+    }
+    
     func setMessengerViewController(uid: String, userName: String) -> UIViewController {
         let view = MessengerViewController()
         view.uid = uid

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditInfoViewController" customModule="Map_Place" customModuleProvider="target">
+            <connections>
+                <outlet property="changePasswordButton" destination="5iR-hY-4zu" id="qkT-hc-Tvl"/>
+                <outlet property="newUserNameTextField" destination="W5d-SN-Fju" id="jxG-SZ-gzH"/>
+                <outlet property="setNewUserNameButton" destination="ndl-kV-OgL" id="gPa-Xp-1iW"/>
+                <outlet property="signOutButton" destination="PG1-ke-mtb" id="7l9-wk-Wmw"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xwV-bX-GzO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG1-ke-mtb">
+                    <rect key="frame" x="20" y="767" width="374" height="45"/>
+                    <color key="backgroundColor" name="System"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Kkb-Ht-PyJ"/>
+                    </constraints>
+                    <state key="normal" title="Sign Out">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5d-SN-Fju">
+                    <rect key="frame" x="20" y="115" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndl-kV-OgL">
+                    <rect key="frame" x="20" y="174" width="374" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="8f2-Tb-64s"/>
+                    </constraints>
+                    <state key="normal" title="Set new user name">
+                        <color key="titleColor" name="SystemLight"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set new user name if you want" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noj-c3-Cxn">
+                    <rect key="frame" x="20" y="64" width="233" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-hY-4zu">
+                    <rect key="frame" x="20" y="244" width="374" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="ZFC-oh-wec"/>
+                    </constraints>
+                    <state key="normal" title="Change password">
+                        <color key="titleColor" name="SystemLight"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ndl-kV-OgL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="5fd-CA-ZXX"/>
+                <constraint firstItem="W5d-SN-Fju" firstAttribute="top" secondItem="noj-c3-Cxn" secondAttribute="bottom" constant="30" id="75A-dS-ohY"/>
+                <constraint firstItem="PG1-ke-mtb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="GIY-a2-FF7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PG1-ke-mtb" secondAttribute="bottom" constant="50" id="MCo-5Q-f9v"/>
+                <constraint firstItem="noj-c3-Cxn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="RVU-Sk-Gxh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PG1-ke-mtb" secondAttribute="trailing" constant="20" id="Vnc-UB-qpR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W5d-SN-Fju" secondAttribute="trailing" constant="20" id="XDt-gE-55v"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5iR-hY-4zu" secondAttribute="trailing" constant="20" id="a5X-pe-c4x"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ndl-kV-OgL" secondAttribute="trailing" constant="20" id="c4P-TO-Ew2"/>
+                <constraint firstItem="W5d-SN-Fju" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="cf3-vG-p07"/>
+                <constraint firstItem="5iR-hY-4zu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ogS-nO-aab"/>
+                <constraint firstItem="noj-c3-Cxn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="q15-Rx-ztE"/>
+                <constraint firstItem="ndl-kV-OgL" firstAttribute="top" secondItem="W5d-SN-Fju" secondAttribute="bottom" constant="25" id="qJm-zc-gXj"/>
+                <constraint firstItem="5iR-hY-4zu" firstAttribute="top" secondItem="ndl-kV-OgL" secondAttribute="bottom" constant="25" id="zDo-M1-m1M"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.37681159420291" y="53.571428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="System">
+            <color red="0.97000002861022949" green="0.49900001287460327" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SystemLight">
+            <color red="1" green="0.79799997806549072" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

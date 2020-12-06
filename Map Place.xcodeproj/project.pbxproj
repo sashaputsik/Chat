@@ -15,6 +15,9 @@
 		9FD81CEF257A9B8100712A10 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81CEE257A9B8000712A10 /* MessageModel.swift */; };
 		9FD81CF2257A9CAE00712A10 /* TextField+MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81CF1257A9CAE00712A10 /* TextField+MessengerView.swift */; };
 		9FD81D09257BF8FA00712A10 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81D08257BF8FA00712A10 /* MessageTableViewCell.swift */; };
+		9FD81D0E257D124100712A10 /* EditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD81D0D257D124100712A10 /* EditInfoViewController.xib */; };
+		9FD81D13257D125A00712A10 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81D12257D125A00712A10 /* EditInfoViewController.swift */; };
+		9FD81D16257D1BE000712A10 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD81D15257D1BE000712A10 /* UIViewController.swift */; };
 		9FF77C1F2577F103004C86CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C1E2577F103004C86CB /* AppDelegate.swift */; };
 		9FF77C212577F103004C86CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF77C202577F103004C86CB /* SceneDelegate.swift */; };
 		9FF77C262577F103004C86CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF77C242577F103004C86CB /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		9FD81CEE257A9B8000712A10 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		9FD81CF1257A9CAE00712A10 /* TextField+MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+MessengerView.swift"; sourceTree = "<group>"; };
 		9FD81D08257BF8FA00712A10 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		9FD81D0D257D124100712A10 /* EditInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditInfoViewController.xib; sourceTree = "<group>"; };
+		9FD81D12257D125A00712A10 /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		9FD81D15257D1BE000712A10 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9FF77C1B2577F103004C86CB /* Map Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Map Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF77C1E2577F103004C86CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		9FF77C202577F103004C86CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../New Group/SceneDelegate.swift"; sourceTree = "<group>"; };
@@ -118,6 +124,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		9FD81D10257D124700712A10 /* EditInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9FD81D12257D125A00712A10 /* EditInfoViewController.swift */,
+			);
+			path = EditInfoViewController;
+			sourceTree = "<group>";
+		};
 		9FF77C122577F103004C86CB = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +191,7 @@
 		9FF77C642577F4A0004C86CB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9FD81D10257D124700712A10 /* EditInfoViewController */,
 				9FF77C702577F805004C86CB /* AuthViewController */,
 				9FF77C802577FEB5004C86CB /* LoginViewController */,
 				9FF77C9925781332004C86CB /* MainViewController */,
@@ -204,6 +219,7 @@
 				9FF77C9E2578137F004C86CB /* MainViewController.xib */,
 				9FD81CE4257A99B100712A10 /* MessengerViewController.xib */,
 				9FF77C862577FEF5004C86CB /* SignInViewController.xib */,
+				9FD81D0D257D124100712A10 /* EditInfoViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +230,7 @@
 				9FD81CF4257A9CB900712A10 /* MessengerView */,
 				9FD81CE1257A961400712A10 /* TableView+MainView.swift */,
 				9FF77C8F2578069A004C86CB /* TextField+LoginView.swift */,
+				9FD81D15257D1BE000712A10 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +337,7 @@
 			files = (
 				9FD81CE5257A99B100712A10 /* MessengerViewController.xib in Resources */,
 				9FF77C2B2577F107004C86CB /* LaunchScreen.storyboard in Resources */,
+				9FD81D0E257D124100712A10 /* EditInfoViewController.xib in Resources */,
 				9FF77C342577F13B004C86CB /* GoogleService-Info.plist in Resources */,
 				9FF77C752577F844004C86CB /* AuthViewController.xib in Resources */,
 				9FF77C9F2578137F004C86CB /* MainViewController.xib in Resources */,
@@ -405,10 +423,12 @@
 				9FD81CF2257A9CAE00712A10 /* TextField+MessengerView.swift in Sources */,
 				9FF77C1F2577F103004C86CB /* AppDelegate.swift in Sources */,
 				9FF77C722577F81D004C86CB /* AuthViewController.swift in Sources */,
+				9FD81D13257D125A00712A10 /* EditInfoViewController.swift in Sources */,
 				9FF77C902578069A004C86CB /* TextField+LoginView.swift in Sources */,
 				9FF77C212577F103004C86CB /* SceneDelegate.swift in Sources */,
 				9FD81D09257BF8FA00712A10 /* MessageTableViewCell.swift in Sources */,
 				9FD81CE9257A99CC00712A10 /* MessengerViewController.swift in Sources */,
+				9FD81D16257D1BE000712A10 /* UIViewController.swift in Sources */,
 				9FF77C7D2577FEB0004C86CB /* SignInViewController.swift in Sources */,
 				9FD81CE2257A961400712A10 /* TableView+MainView.swift in Sources */,
 				9FF77C792577FC71004C86CB /* ModulesBuilder.swift in Sources */,

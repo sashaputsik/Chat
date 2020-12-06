@@ -3,6 +3,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseFirestore
+
 class MainViewController: UIViewController, MainModuleProtocol {
     var users: [User]?
     var presenter: MainModulePresenterProtocol!
@@ -22,12 +23,12 @@ class MainViewController: UIViewController, MainModuleProtocol {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
         
-        let leftButton = UIBarButtonItem(title: "Sign Out",
+        let leftButton = UIBarButtonItem(title: "Edit info",
                                          style: .done,
                                          target: self,
-                                         action: #selector(signOut))
+                                         action: #selector(editInfo))
         let rigthButton = UIBarButtonItem(title: "Search",
                                           style: .done,
                                           target: self,
@@ -55,10 +56,12 @@ class MainViewController: UIViewController, MainModuleProtocol {
         let firestore = Firestore.firestore().collection("userName")
         let back = DispatchQueue.global(qos: .userInteractive)
         back.async {
-            firestore.getDocuments { (snapshot, error) in
+            firestore.getDocuments {[weak self] (snapshot, error) in
+                guard let self = self else{return }
                 guard let data = snapshot?.documents else{return }
                 if error != nil{
-                    print(error?.localizedDescription)
+                    guard let error = error else{return }
+                    print(error.localizedDescription)
                 }else{
                     for userNames in data{
                         guard let email = userNames["email"]  as? String,
@@ -67,8 +70,7 @@ class MainViewController: UIViewController, MainModuleProtocol {
                         let user = User(name: email, userName: userName, uid: uid, password: nil)
                         guard let currentUser = Auth.auth().currentUser?.email else{return }
                         if currentUser == user.email{
-                            print("hello \(currentUser)")
-                                self.title = currentUser
+                            self.title = user.userName
                         }else{
                             usersInBase.append(user)
                         }
@@ -81,9 +83,8 @@ class MainViewController: UIViewController, MainModuleProtocol {
     
     //MARK: Handler
     @objc
-    private func signOut(){
-        try? Auth.auth().signOut()
-        navigationController?.pushViewController(Builder().setAuthViewController(),
+    private func editInfo(){
+        navigationController?.pushViewController(Builder().setEditInfoViewController(),
                                                  animated: true)
     }
     
