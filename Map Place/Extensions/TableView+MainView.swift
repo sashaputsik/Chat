@@ -35,7 +35,7 @@ extension MainViewController: UITableViewDelegate{
         if editingStyle == .delete{
             guard let deletedUserUid = users?[indexPath.row].uid else{return }
             guard let currentUserUid = Auth.auth().currentUser?.uid else{return }
-            let deletedDatabase = Database.database().reference().child("users").child(currentUserUid).child("messages").child(deletedUserUid)
+            let deletedDatabase = Database.database().reference().child("users").child(currentUserUid).child("").child(deletedUserUid)
             print(deletedDatabase)
             deletedDatabase.removeValue { [weak self] (error, _) in
                 guard let self = self else{return }

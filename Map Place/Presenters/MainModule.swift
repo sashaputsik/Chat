@@ -2,8 +2,6 @@ import Foundation
 
 protocol MainModuleProtocol {
     var presenter: MainModulePresenterProtocol! { get set }
-    var users: [User]? {get set}
-    func getUsersList(complitionHandler: @escaping (([User])->()))
 }
 
 protocol MainModulePresenterProtocol {

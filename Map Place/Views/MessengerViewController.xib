@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qG7-wo-Lna">
-                    <rect key="frame" x="0.0" y="44" width="414" height="779"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="774"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="eaQ-0X-FNO"/>
@@ -32,28 +33,35 @@
                     </connections>
                 </tableView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zuS-ee-NZ8">
-                    <rect key="frame" x="0.0" y="828" width="358" height="34"/>
+                    <rect key="frame" x="5" y="823" width="355" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="bdL-97-wLV"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzG-w1-CBv">
-                    <rect key="frame" x="363" y="832" width="36" height="30"/>
-                    <state key="normal" title="Send"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzG-w1-CBv">
+                    <rect key="frame" x="365" y="823" width="34" height="34"/>
+                    <color key="backgroundColor" name="HerMessage"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="34" id="7US-FC-wrd"/>
+                        <constraint firstAttribute="height" constant="34" id="T6W-0a-MUW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="paperplane" catalog="system"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="zuS-ee-NZ8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Bj0-jt-adn"/>
+                <constraint firstItem="zuS-ee-NZ8" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-5" id="Bj0-jt-adn"/>
                 <constraint firstItem="vzG-w1-CBv" firstAttribute="leading" secondItem="zuS-ee-NZ8" secondAttribute="trailing" constant="5" id="HVC-9Q-OFi"/>
                 <constraint firstItem="qG7-wo-Lna" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PTK-So-nZ8"/>
                 <constraint firstItem="zuS-ee-NZ8" firstAttribute="top" secondItem="qG7-wo-Lna" secondAttribute="bottom" constant="5" id="Q8e-KI-ep3"/>
                 <constraint firstItem="qG7-wo-Lna" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="U7i-Og-3DE"/>
-                <constraint firstItem="vzG-w1-CBv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Yu7-DI-dIK"/>
-                <constraint firstItem="zuS-ee-NZ8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZJM-dD-Z6M"/>
+                <constraint firstItem="vzG-w1-CBv" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-5" id="Yu7-DI-dIK"/>
+                <constraint firstItem="zuS-ee-NZ8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="ZJM-dD-Z6M"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vzG-w1-CBv" secondAttribute="trailing" constant="15" id="q5f-cF-YRQ"/>
                 <constraint firstItem="qG7-wo-Lna" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="zlc-ct-OgX"/>
             </constraints>
@@ -61,6 +69,10 @@
         </view>
     </objects>
     <resources>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
+        <namedColor name="HerMessage">
+            <color red="0.35400000214576721" green="0.7160000205039978" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

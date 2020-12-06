@@ -18,6 +18,7 @@ class MessengerViewController: UIViewController {
         sendButton.addTarget(self,
                              action: #selector(send),
                              for: .touchUpInside)
+        sendButton.layer.cornerRadius = sendButton.frame.height/2
         navigationController?.isNavigationBarHidden = false
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(handle(keyboardShowNotification:)),
@@ -91,9 +92,15 @@ class MessengerViewController: UIViewController {
         if let userInfo = notification.userInfo,
             let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
             for constrain in self.bottom{
-                constrain.constant  = 0 - keyboardRectangle.height
+                constrain.constant  = 0 - keyboardRectangle.height - 5
+               
                 self.textField.layoutIfNeeded()
             }
+            let indexPath = IndexPath(item: self.messages.count-1,
+                                      section: 0)
+            self.tableView.scrollToRow(at: indexPath,
+                                       at: .bottom,
+                                       animated: true)
         }
     }
     
