@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="Map_Place" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="LaG-1O-jfY" id="lJo-iI-mya"/>
+                <outlet property="forgotPasswordButton" destination="rDB-pQ-WFp" id="ewJ-2n-ApG"/>
                 <outlet property="passwordTextField" destination="Fci-1P-P2N" id="2FY-KD-nt5"/>
                 <outlet property="signInButton" destination="9Fs-BM-pNH" id="GLy-7a-JoT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="5u1-by-cee"/>
@@ -38,32 +39,41 @@
                     <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fs-BM-pNH">
-                    <rect key="frame" x="40" y="495" width="334" height="45"/>
+                    <rect key="frame" x="40" y="506" width="334" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="fI5-Na-ucg"/>
+                        <constraint firstAttribute="height" constant="45" id="cEN-9f-HRr"/>
                     </constraints>
                     <state key="normal" title="Sign In">
                         <color key="titleColor" name="System"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDB-pQ-WFp">
+                    <rect key="frame" x="282" y="473" width="102" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="Forgot password">
+                        <color key="titleColor" red="0.136459738" green="0.16041278840000001" blue="0.185408026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="rDB-pQ-WFp" firstAttribute="top" secondItem="JIG-6t-5s7" secondAttribute="bottom" constant="8" symbolic="YES" id="2ZD-Ap-R80"/>
                 <constraint firstItem="Fci-1P-P2N" firstAttribute="trailing" secondItem="JIG-6t-5s7" secondAttribute="trailing" id="35Q-Oe-TtL"/>
                 <constraint firstItem="LaG-1O-jfY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="6kQ-eQ-OVi"/>
                 <constraint firstItem="LaG-1O-jfY" firstAttribute="trailing" secondItem="JIG-6t-5s7" secondAttribute="trailing" id="E7p-JX-UVF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LaG-1O-jfY" secondAttribute="trailing" constant="30" id="FbT-t1-v5i"/>
+                <constraint firstItem="9Fs-BM-pNH" firstAttribute="top" secondItem="rDB-pQ-WFp" secondAttribute="bottom" constant="5" id="MFZ-7n-wdi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Fs-BM-pNH" secondAttribute="trailing" constant="40" id="MW5-fg-qC0"/>
                 <constraint firstItem="LaG-1O-jfY" firstAttribute="leading" secondItem="JIG-6t-5s7" secondAttribute="leading" id="QfM-F2-912"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rDB-pQ-WFp" secondAttribute="trailing" constant="30" id="VH5-Xg-Gm3"/>
                 <constraint firstItem="Fci-1P-P2N" firstAttribute="leading" secondItem="JIG-6t-5s7" secondAttribute="leading" id="cAQ-to-YMg"/>
                 <constraint firstItem="JIG-6t-5s7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="das-FK-zPP"/>
                 <constraint firstItem="JIG-6t-5s7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ddQ-w2-w0w"/>
                 <constraint firstItem="JIG-6t-5s7" firstAttribute="top" secondItem="LaG-1O-jfY" secondAttribute="bottom" constant="30" id="htm-qW-MlT"/>
                 <constraint firstItem="Fci-1P-P2N" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nNY-Ve-8Gb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Fs-BM-pNH" secondAttribute="trailing" constant="40" id="ner-3R-wkI"/>
                 <constraint firstItem="Fci-1P-P2N" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qqv-qX-csJ"/>
-                <constraint firstItem="9Fs-BM-pNH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="siP-ZU-pba"/>
-                <constraint firstItem="9Fs-BM-pNH" firstAttribute="top" secondItem="JIG-6t-5s7" secondAttribute="bottom" constant="30" id="yEx-ye-LCC"/>
+                <constraint firstItem="9Fs-BM-pNH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="xz3-1R-dbE"/>
             </constraints>
             <point key="canvasLocation" x="-149" y="59"/>
         </view>

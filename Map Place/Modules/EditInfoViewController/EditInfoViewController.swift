@@ -67,9 +67,10 @@ class EditInfoViewController: UIViewController {
                         self.newUserNameTextField.text = ""
                         self.newUserNameTextField.placeholder = newNameToData
                         self.newUserNameTextField.endEditing(true)
-                        self.present(UIViewController().alert(title: "Success", message: "Change new name"),
-                                animated: true,
-                                completion: nil)
+                        self.present(UIViewController().alert(title: "Success",
+                                                              message: "Change new name"),
+                                     animated: true,
+                                     completion: nil)
                     }
                 }
             }
@@ -78,7 +79,28 @@ class EditInfoViewController: UIViewController {
     
     @objc
     private func changePassword(){
-        
+        let alertController = UIViewController().alert(title: "Password",
+                                                       message: "Write new password")
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Password"
+            
+        }
+    
+        present(alertController,
+                animated: true) {
+            guard let password = alertController.textFields?.first?.text else{return }
+        Auth.auth().currentUser?.updatePassword(to: password,
+                                                    completion: {[weak self] (error) in
+                                                        guard let self = self else{return }
+                                                        if error != nil{
+                                                            guard let error = error else{return }
+                                                            self.present(UIViewController().alert(title: "Error",
+                                                                                                  message: error.localizedDescription),
+                                                                    animated: false,
+                                                                    completion: nil)
+                                                        }
+            })
+        }
     }
 
 }
