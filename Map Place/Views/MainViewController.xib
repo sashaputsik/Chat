@@ -19,15 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctd-Cd-V4Y">
-                    <rect key="frame" x="338" y="44" width="56" height="30"/>
-                    <state key="normal" title="SignOut"/>
-                    <connections>
-                        <action selector="signOut:" destination="-1" eventType="touchUpInside" id="Sa2-ez-mxo"/>
-                    </connections>
-                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HTd-uV-mus">
-                    <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Je7-l7-IPS"/>
                         <outlet property="delegate" destination="-1" id="64M-oK-EL1"/>
@@ -37,12 +30,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ctd-Cd-V4Y" secondAttribute="trailing" constant="20" id="7h3-6D-Oe7"/>
+                <constraint firstItem="HTd-uV-mus" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9Gu-ge-OfC"/>
                 <constraint firstItem="HTd-uV-mus" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SgL-cC-Wgm"/>
                 <constraint firstItem="HTd-uV-mus" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="cko-g6-Oh8"/>
                 <constraint firstItem="HTd-uV-mus" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="fkw-HQ-n91"/>
-                <constraint firstItem="ctd-Cd-V4Y" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="n4l-o6-OIy"/>
-                <constraint firstItem="HTd-uV-mus" firstAttribute="top" secondItem="ctd-Cd-V4Y" secondAttribute="bottom" constant="10" id="um1-Qs-fJY"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="58.928571428571423"/>
         </view>

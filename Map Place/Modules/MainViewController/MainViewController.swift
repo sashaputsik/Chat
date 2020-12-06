@@ -23,11 +23,18 @@ class MainViewController: UIViewController, MainModuleProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-    }
-    @IBAction func signOut(_ sender: Any) {
-        try? Auth.auth().signOut()
-        navigationController?.pushViewController(Builder().setAuthViewController(),
-                                                 animated: true)
+        
+        let leftButton = UIBarButtonItem(title: "Sign Out",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(signOut))
+        let rigthButton = UIBarButtonItem(title: "Search",
+                                          style: .done,
+                                          target: self,
+                                          action: #selector(search))
+        navigationItem.leftBarButtonItem = leftButton
+        navigationItem.rightBarButtonItem = rigthButton
+        
     }
     
     //MARK: get Username
@@ -70,6 +77,19 @@ class MainViewController: UIViewController, MainModuleProtocol {
                 complitionHandler(usersInBase)
             }
         }
+    }
+    
+    //MARK: Handler
+    @objc
+    private func signOut(){
+        try? Auth.auth().signOut()
+        navigationController?.pushViewController(Builder().setAuthViewController(),
+                                                 animated: true)
+    }
+    
+    @objc
+    private func search(){
+        
     }
 }
 
